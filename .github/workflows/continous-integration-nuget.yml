@@ -19,9 +19,15 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-    - name: Restore dependencies
-      run: dotnet restore
-
+    - name: Navigate to Project Directory and List Contents
+      run: |
+        cd HATEOAS-NuGet/HATEOAS
+        ls -l # This will list files to confirm you're in the right directory
+        
+    - name: Restore Dependencies
+      run: |
+        dotnet restore YourProject.cspro
+        
     - name: Build
       run: dotnet build --no-restore 
 
