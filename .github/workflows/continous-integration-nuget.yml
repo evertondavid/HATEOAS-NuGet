@@ -14,26 +14,21 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: Install .NET 8
+    - name: List directories in the root
+      run: ls -la
+
+    - name: Setup .NET 8
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: '8.0.x'
 
     - name: Navigate to Project Directory and List Contents
       run: |
         cd HATEOAS-NuGet/HATEOAS
-        ls -l # This will list files to confirm you're in the right directory
-        
-    - name: Restore Dependencies
-      run: |
-        dotnet restore YourProject.cspro
-        
-    - name: Build
-      run: dotnet build --no-restore 
+        ls -la
 
-    - name: Change .csproj version
-      run: |
-        cd ./HATEOAS-NuGet/
+    - name: Restore Dependencies
+      run: dotnet restore YourProject.csproj
 
         # Increment version in your project file (e.g., .csproj)
         # Replace the placeholder with your actual project file name
