@@ -19,17 +19,14 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-    - name: Restore dependencies
-      run: dotnet restore
+    - name: List root directories
+      run: ls -l
 
-    - name: Build
-      run: dotnet build --no-restore 
+    - name: Navigate to Project Directory
+      run: cd HATEOAS-NuGet/HATEOAS && ls -l
 
-    - name: Change .csproj version
-      run: |
-        cd ./HATEOAS-NuGet/HATEOAS
-        ls -l
-        dotnet restore
+    - name: Restore Dependencies
+      run: dotnet restore HATEOAS-NuGet/HATEOAS/YourProject.csproj
 
         # Increment version in your project file (e.g., .csproj)
         # Replace the placeholder with your actual project file name
