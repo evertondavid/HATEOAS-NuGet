@@ -2,9 +2,9 @@ name: .NET 8 Continuous Integration with GitHub, GitHub Actions and Nuget Packag
 
 on:
   push:
-    branches: main
+    branches: [main]
   pull_request:
-    branches: main
+    branches: [main]
 
 jobs:
   build-and-test:
@@ -14,16 +14,18 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: Install .NET 8
+    - name: Setup .NET 8
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: '8.0.x'
 
     - name: List root directories
       run: ls -l
 
-    - name: Navigate to Project Directory
-      run: cd HATEOAS-NuGet/HATEOAS && ls -l
+    - name: Navigate to Project Directory and List Contents
+      run: |
+        cd HATEOAS-NuGet/HATEOAS
+        ls -l
 
     - name: Restore Dependencies
       run: dotnet restore HATEOAS-NuGet/HATEOAS/YourProject.csproj
