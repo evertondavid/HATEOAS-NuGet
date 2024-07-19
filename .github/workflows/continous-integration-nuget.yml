@@ -14,9 +14,6 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: List directories in the root
-      run: ls -l
-
     - name: Setup .NET 8
       uses: actions/setup-dotnet@v3
       with:
@@ -25,10 +22,11 @@ jobs:
     - name: Navigate to Project Directory and List Contents
       run: |
         cd HATEOAS-NuGet/HATEOAS
-        ls -l
+        ls -l # This will list files to confirm you're in the right directory
 
     - name: Restore Dependencies
-      run: dotnet restore YourProject.csproj
+      run: |
+        dotnet restore YourProject.csproj
 
         # Increment version in your project file (e.g., .csproj)
         # Replace the placeholder with your actual project file name
