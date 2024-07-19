@@ -1,19 +1,57 @@
-name: .NET 8 Continuous Integration with GitHub, GitHub Actions, and Nuget Packages
+name: .NET 8 Continuous Integration with GitHub, GitHub Actions and Nuget Packages
 
 on:
   push:
     branches: main
+  pull_request:
+    branches: main
 
 jobs:
-  build:
-
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout Repository
       uses: actions/checkout@v3
 
     - name: Install .NET 8
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore 
+
+    - name: Change .csproj version
+      run: |
+        cd ./Users/everton.david/Projects/HATEOAS-NuGet/HATEOAS
+
+        # Increment version in your project file (e.g., .csproj)
+        # Replace the placeholder with your actual project file name
+        PROJECT_FILE=HATEOAS.csproj
+        CURRENT_VERSION=$(grep -oP '<Version>\K[^<]+' $PROJECT_FILE)
+        NEW_VERSION=$(echo $CURRENT_VERSION | awk -F. '{$NF+=1; OFS="."; print $0}')
+
+        # Replace spaces with dots
+        NEW_VERSION=$(echo $NEW_VERSION | tr ' ' '.')
+
+        # Update the version in the project file
+        sed -i "s|<Version>$CURRENT_VERSION</Version>|<Version>$NEW_VERSION</Version>|" $PROJECT_FILE
+
+        # Commit the version change
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Increment version to $NEW_VERSION"  -a
+        git push
+
+    - name: Generate Release
+      run: dotnet build -c release
+
+    - name: Generate Nuget Package
+      run: dotnet pack -c release -o ./dist/
+
+    - name: Push Nuget Package
+      run: dotnet nuget push "./dist/*" -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
