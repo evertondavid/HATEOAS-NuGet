@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- Propriedades para geração do pacote NuGet -->
+    
+    <PackageId>HATEOAS.Library</PackageId>
+    <Version>8.0.302.1</Version>
+    <Authors>Everton David</Authors>
+    <Description>This is a smart library to implements HATEOAS documentation in your Project</Description>
+    <Copyright>Copyright 2024 - Everton David</Copyright>
+    <PackageProjectUrl>https://github.com/evertondavid/HATEOAS-NuGet.git</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/evertondavid/HATEOAS-NuGet.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackgeTags>hateoas, hypermedia, restful, aspnetcore</PackgeTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  
+</Project>
