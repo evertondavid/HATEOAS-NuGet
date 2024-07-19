@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: List directories in the root
-      run: ls -la
+      run: ls -l
 
     - name: Setup .NET 8
       uses: actions/setup-dotnet@v3
@@ -25,7 +25,7 @@ jobs:
     - name: Navigate to Project Directory and List Contents
       run: |
         cd HATEOAS-NuGet/HATEOAS
-        ls -la
+        ls -l
 
     - name: Restore Dependencies
       run: dotnet restore YourProject.csproj
