@@ -27,7 +27,7 @@ jobs:
 
     - name: Change .csproj version
       run: |
-        cd ./Users/everton.david/Projects/HATEOAS-NuGet/HATEOAS
+        cd HATEOAS-NuGet/HATEOAS
 
         # Increment version in your project file (e.g., .csproj)
         # Replace the placeholder with your actual project file name
