@@ -14,12 +14,12 @@ This is a smart library to implements HATEOAS pattern in your RESTFul API's, imp
 >### 1 - Import HATEOAS-NuGet to your projetct
 #### Import with command line
 ```bash
-Install-Package HATEOAS -Version 8.0.302.4
+Install-Package HATEOAS -Version 8.0.302.6
 ```
 
 #### Import with nuget package manager
 
-![Nuget Package Mannager](https://github.com/leandrocgsi/Erudio.HATEOAS/blob/main/images/nuget_package_mannager.png?raw=true)
+![Nuget Package Mannager](https://github.com/evertondavid/HATEOAS-NuGet/blob/main/image/nuget_package_mannager.png?raw=true)
 
 >### 2 - Implements *ISupportsHyperMedia* in your exposed object.
 
