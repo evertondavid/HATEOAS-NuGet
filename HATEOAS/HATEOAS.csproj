@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <None Include="docs/README.md" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
     <None Include="icons/everton-hateoas-128x128.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
   
