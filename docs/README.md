@@ -1,7 +1,6 @@
 # HATEOAS-NuGet
 
 [![NuGet](https://img.shields.io/nuget/v/HATEOAS-NuGet.svg)](https://www.nuget.org/packages/HATEOAS-NuGet)
-[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=ZJ4NQJXEKQ63A)
 [![GitHub repo](https://img.shields.io/badge/GitHub-Repository-green.svg)](https://github.com/evertondavid/HATEOAS-NuGet)
 ![Last Commit](https://img.shields.io/github/last-commit/evertondavid/HATEOAS-NuGet)
 ![Forks](https://github.com/evertondavid/HATEOAS-NuGet/actions/workflows/continous-integration-nuget.yml/badge.svg?event=fork)
