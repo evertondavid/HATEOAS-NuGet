@@ -8,7 +8,7 @@
     <!-- Propriedades para geração do pacote NuGet -->
     
     <PackageId>HATEOAS.Library</PackageId>
-    <Version>8.0.302.1</Version>
+    <Version>8.0.302.2</Version>
     <Authors>Everton David</Authors>
     <Description>This is a smart library to implements HATEOAS documentation in your Project</Description>
     <Copyright>Copyright 2024 - Everton David</Copyright>
