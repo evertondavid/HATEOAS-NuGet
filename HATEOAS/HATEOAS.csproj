@@ -21,8 +21,6 @@
     <PackageIcon>everton-hateoas-128x128.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
 
-
-
   </PropertyGroup>
 
   <ItemGroup>
