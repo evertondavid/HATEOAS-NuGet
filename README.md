@@ -1,6 +1,6 @@
 # HATEOAS-NuGet
 
-[![NuGet](https://img.shields.io/nuget/v/HATEOAS-NuGet.svg)](https://www.nuget.org/packages/HATEOAS-NuGet)
+[![NuGet](https://img.shields.io/nuget/v/HATEOAS-NuGet.svg)](https://www.nuget.org/packages/HATEOAS.Library)
 [![GitHub repo](https://img.shields.io/badge/GitHub-Repository-green.svg)](https://github.com/evertondavid/HATEOAS-NuGet)
 ![Last Commit](https://img.shields.io/github/last-commit/evertondavid/HATEOAS-NuGet)
 ![Forks](https://github.com/evertondavid/HATEOAS-NuGet/actions/workflows/continous-integration-nuget.yml/badge.svg?event=fork)
@@ -14,7 +14,7 @@ This is a smart library to implements HATEOAS pattern in your RESTFul API's, imp
 >### 1 - Import HATEOAS-NuGet to your projetct
 #### Import with command line
 ```bash
-Install-Package HATEOAS -Version 8.0.302.2
+Install-Package HATEOAS -Version 8.0.302.4
 ```
 
 #### Import with nuget package manager
