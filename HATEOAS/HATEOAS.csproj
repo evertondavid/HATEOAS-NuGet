@@ -18,9 +18,7 @@
     <PackgeTags>hateoas, hypermedia, restful, aspnetcore</PackgeTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageIcon>everton-hateoas-128x128.png</PackageIcon>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
 
 
@@ -29,8 +27,8 @@
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <Nome Include="docs/README.md" Pack="true" PackagePath="/"/>
-    <Nome Include="icons/everton-hateoas-128x128.png" Pack="true" PackagePath="/"/>
+    <None Include="docs/README.md" Pack="true" PackagePath="\"/>
+    <None Include="icons/everton-hateoas-128x128.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
   
 </Project>
