@@ -54,4 +54,8 @@ jobs:
     - name: Push Nuget Package
       run: |
         cd HATEOAS
+<<<<<<< HEAD
         dotnet nuget push "./dist/*" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+=======
+        dotnet nuget push "./dist/*" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+>>>>>>> origin/main
