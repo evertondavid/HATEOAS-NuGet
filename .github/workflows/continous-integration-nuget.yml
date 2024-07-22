@@ -58,4 +58,4 @@ jobs:
     - name: Push Nuget Package
       run: |
         cd ${{ env.PROJECT_PATH }}
-        dotnet nuget push "./dist/*" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+        dotnet nuget push "./dist/*" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate

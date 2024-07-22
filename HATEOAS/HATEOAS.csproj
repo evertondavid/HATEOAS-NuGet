@@ -20,6 +20,8 @@
     <IncludeSymbols>true</IncludeSymbols>
     <PackageIcon>everton-hateoas-128x128.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
 
   </PropertyGroup>
 
